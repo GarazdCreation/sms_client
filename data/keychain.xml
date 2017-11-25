@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="keychain_turbosms" model="keychain.account">
+        <field name="name">Turbo SMS default</field>
+        <field name="namespace">turbosms_provider</field>
+        <field name="technical_name">turbosms_default_account</field>
+    </record>
+</odoo>
