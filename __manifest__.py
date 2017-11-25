@@ -7,7 +7,6 @@
     'version': '10.0.1.0.1',
     'license': 'AGPL-3',
     'category': 'Tools',
-    'description': 'Client for sending SMS via TurboSMS service (https://turbosms.ua). ',
     'author': 'Garazd Creation',
     'website': "https://garazd.biz",
     'depends': ['mail', 'base_sms_client', 'base_suspend_security', 'keychain'],
