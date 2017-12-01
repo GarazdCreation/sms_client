@@ -6,6 +6,9 @@ This module provides the ability to send SMS messages via the `TurboSMS`_ servic
 
 .. _TurboSMS: https://turbosms.ua
 
+Installation instructions in Russian: `Setup TurboSMS client`_
+
+.. _Setup TurboSMS client: https://garazd.biz/blog/odoo-9/post/odoo-18
 
 Installation
 ============
@@ -41,8 +44,9 @@ To use this module, you need to:
 * Select one or multiple partner
 * Go to more and will found some wizards to send sms
 
+
 Support and development
------------------------
+=======================
 
 Contact us:
 
