@@ -40,3 +40,11 @@ To use this module, you need to:
 * Go to partner menu
 * Select one or multiple partner
 * Go to more and will found some wizards to send sms
+
+Support and development
+-----------------------
+
+Contact us:
+
+* support@garazd.biz
+* https://garazd.biz/page/contactus
