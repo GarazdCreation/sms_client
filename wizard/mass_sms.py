@@ -5,8 +5,6 @@
 from odoo import models, fields, api, _
 from openerp.exceptions import Warning
 from suds.client import Client
-import logging
-_logger = logging.getLogger(__name__)
 
 
 class WizardMassSms(models.TransientModel):
@@ -14,7 +12,7 @@ class WizardMassSms(models.TransientModel):
 
     balance = fields.Char('SMS balance', store=False,
                           compute='_compute_sms_balance')
-    char_qty = fields.Integer('Characters', store=True,
+    char_qty = fields.Integer('Qty of characters', store=True,
                                 compute='_compute_message_characters')
 
     @api.one
@@ -64,6 +62,7 @@ class WizardMassSms(models.TransientModel):
 
         return {
             'gateway_id': self.gateway_id.id,
+            'company_id': self.env.user.company_id.id,
             'state': 'draft',
             'message': self.message,
             'validity': self.validity,
