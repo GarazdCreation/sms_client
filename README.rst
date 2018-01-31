@@ -6,9 +6,9 @@ This module provides the ability to send SMS messages via the `TurboSMS`_ servic
 
 .. _TurboSMS: https://turbosms.ua
 
-Installation instructions in Russian: `Setup TurboSMS client`_
+Installation instructions in Russian: `Setup TurboSMS client in Odoo`_
 
-.. _Setup TurboSMS client: https://garazd.biz/blog/odoo-9/post/odoo-18
+.. _Setup TurboSMS client in Odoo: https://garazd.biz/blog/odoo-9/post/odoo-18
 
 Installation
 ============

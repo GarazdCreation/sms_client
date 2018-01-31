@@ -5,6 +5,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from odoo import api, models, fields, _
+from odoo import exceptions
 from ..models.keychain import TURBOSMS_KEYCHAIN_NAMESPACE
 import logging
 _logger = logging.getLogger(__name__)
