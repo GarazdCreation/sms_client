@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+  <record id="garazd_sms_gateway_form" model="ir.ui.view">
+      <field name="name">garazd.sms.gateway.form</field>
+      <field name="model">sms.gateway</field>
+      <field name="inherit_id" ref="base_sms_client.sms_gateway_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//group[1]" position="after">
+            <button string="Test connection" name="test_turbosms_connection"
+                type="object" help="Test connection to TurboSMS server"/>
+        </xpath>
+      </field>
+  </record>
+
+</odoo>

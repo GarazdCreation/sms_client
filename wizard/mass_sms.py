@@ -3,7 +3,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from odoo import models, fields, api, _
-from openerp.exceptions import Warning
+from odoo.exceptions import Warning
 from suds.client import Client
 
 
@@ -29,21 +29,18 @@ class WizardMassSms(models.TransientModel):
             keychain_data = keychain_account.get_data()
             params = {
                 'login': keychain_account['login'],
-                'password': keychain_account.get_password(),
+                'password': keychain_account._get_password(),
                 'url': self.gateway_id.url,
                 }
             soap = Client(params['url'])
-            auth_result = soap.service.Auth(
-                params['login'],
-                params['password']).encode('utf8'
-            )
+            auth_result = soap.service.Auth(params['login'], params['password']).encode('utf8')
             params.update({
                 'password': '*****',
                 'login': '*****',
                 })
 
-            if auth_result != u'Вы успешно авторизировались':
-                raise Warning(_(u'Ошибка авторизации: %s' % auth_result))
+            if auth_result != 'Вы успешно авторизировались':
+                raise Warning(_('Authorization error: %s' % auth_result))
             else:
                 self.balance = soap.service.GetCreditBalance()
 

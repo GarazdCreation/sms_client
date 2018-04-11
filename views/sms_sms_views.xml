@@ -25,8 +25,8 @@
       <field name="arch" type="xml">
         <xpath expr="//sheet" position="inside">
             <group name="turbosms">
-              <field name="turbosms_uuid"/>
-              <field name="turbosms_state" string="TurboSMS"
+              <field name="turbosms_uuid" string="TurboSMS SMS ID"/>
+              <field name="turbosms_state" string="TurboSMS Status"
                   attrs="{'invisible': [('turbosms_uuid', '=', False)]}"/>
               <button string="Get SMS status" name="get_turbosms_send_status"
                   type="object" icon="fa-commenting-o"

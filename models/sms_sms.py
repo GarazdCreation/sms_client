@@ -5,7 +5,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from odoo import api, models, fields, _
-from odoo import exceptions
+from odoo.exceptions import Warning
 from ..models.keychain import TURBOSMS_KEYCHAIN_NAMESPACE
 import logging
 _logger = logging.getLogger(__name__)
@@ -34,7 +34,7 @@ class SmsSms(models.Model):
         params = {
             'smsAccount': smsAccount,
             'login': keychain_account['login'],
-            'password': keychain_account.get_password(),
+            'password': keychain_account._get_password(),
             'from': self.gateway_id.from_provider,
             'url': self.gateway_id.url,
             'to': self._convert_to_e164(self.mobile),
@@ -64,15 +64,15 @@ class SmsSms(models.Model):
         soap = Client(params['url'])
         auth_result = soap.service.Auth(params['login'],
                                         params['password']).encode('utf8')
-        if auth_result != u'Вы успешно авторизировались':
-            raise exceptions.Warning(u'Ошибка авторизации: %s' % auth_result)
+        if auth_result != 'Вы успешно авторизировались':
+            raise Warning('Authorization error: %s' % auth_result)
         destination = self._convert_to_e164(self.mobile)
         message = self.message
         send_result = soap.service.SendSMS(params['smsAccount'],
                                 params['to'], params['message']).ResultArray
         _logger.debug("\n TurboSMS send_result:  %s", send_result)
         send_status = send_result[0].encode('utf8')
-        if send_status != u'Сообщения успешно отправлены':
+        if send_status != 'Сообщения успешно отправлены':
             raise ValueError(send_status)
         self.turbosms_uuid = send_result[1].encode('utf8')
         params.update({
@@ -92,7 +92,7 @@ class SmsSms(models.Model):
             keychain_data = keychain_account.get_data()
             params = {
                 'login': keychain_account['login'],
-                'password': keychain_account.get_password(),
+                'password': keychain_account._get_password(),
                 'url': self.gateway_id.url,
                 }
             soap = Client(params['url'])
@@ -102,7 +102,7 @@ class SmsSms(models.Model):
                 'password': '*****',
                 'login': '*****',
                 })
-            if auth_result != u'Вы успешно авторизировались':
-                raise exceptions.Warning(u'Ошибка авторизации: %s' % auth_result)
+            if auth_result != 'Вы успешно авторизировались':
+                raise Warning('Authorization error: %s' % auth_result)
 
             self.turbosms_state = soap.service.GetMessageStatus(self.turbosms_uuid)

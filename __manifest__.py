@@ -15,6 +15,7 @@
         'data/keychain.xml',
         'views/res_partner_views.xml',
         'views/sms_sms_views.xml',
+        'views/sms_gateway_views.xml',
         'wizard/mass_sms_view.xml',
     ],
     'installable': True,
