@@ -20,6 +20,7 @@ except :
 class SmsSms(models.Model):
     _inherit = "sms.sms"
 
+    company_id = fields.Many2one(default=lambda self: self.env.user.company_id.id)
     turbosms_uuid = fields.Char('TurboSMS UUID')
     turbosms_state = fields.Char('TurboSMS Send State')
 
