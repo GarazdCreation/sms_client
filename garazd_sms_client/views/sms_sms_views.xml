@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="sms_sms_view_tree" model="ir.ui.view">
+        <field name="name">sms.sms.view.tree</field>
+        <field name="model">sms.sms</field>
+        <field name="inherit_id" ref="base_sms_client.sms_sms_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="attributes">
+                <attribute name="default_order">create_date desc</attribute>
+            </xpath>
+            <!-- <xpath expr="//field[@name='mobile']" position="after">
+            </xpath> -->
+            <xpath expr="//field[@name='gateway_id']" position="after">
+                <field name="channel" attrs="{'readonly':[('state','not in',['draft'])]}"/>
+                <field name="provider_uuid" invisible="1"/>
+                <field name="provider_state"
+                    attrs="{'invisible': [('provider_uuid', '=', False)]}"/>
+                <field name="sms_count"
+                    attrs="{'invisible': [('provider_uuid', '=', False)]}"/>
+                <button string="" name="get_sms_send_status"
+                    type="object" icon="fa-commenting-o"
+                    help="Get SMS send status"
+                    attrs="{'invisible': [('provider_uuid', '=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sms_sms_view_form" model="ir.ui.view">
+        <field name="name">sms.sms.view.form</field>
+        <field name="model">sms.sms</field>
+        <field name="inherit_id" ref="base_sms_client.sms_sms_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="replace">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="partner_id"/>
+                            <field name="mobile"/>
+                            <field name="create_date" readonly="True"/>
+                        </group>
+                        <group>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                            <field name="gateway_id" colspan="2"/>
+                            <field name="channel" attrs="{'readonly':[('state','not in',['draft'])]}"/>
+                        </group>
+                    </group>
+                    <separator string="SMS Message" colspan="4"/>
+                    <h4><field name="message" nolabel="1"/></h4>
+                    <group>
+                        <group name="status" string="Status">
+                            <field name="provider_uuid" />
+                            <field name="provider_state"
+                                attrs="{'invisible': [('provider_uuid', '=', False)]}"/>
+                            <field name="char_qty"/>
+                            <field name="sms_count"
+                                attrs="{'invisible': ['|',('provider_uuid', '=', False),('channel','!=','sms')]}"/>
+                            <field name="error"/>
+                            <button string="Get SMS send status" name="get_sms_send_status"
+                                type="object" icon="fa-commenting-o"
+                                help="Get SMS send status"
+                                attrs="{'invisible': [('provider_uuid', '=', False)]}"/>
+                        </group>
+                        <group name="media" string="Viber" attrs="{'invisible': [('channel','!=','viber')]}">
+                            <field name="media_type"
+                                widget="radio" options="{'horizontal': true}"
+                                attrs="{'readonly':[('state','not in',['draft'])]}"/>
+                            <field name="media_image"
+                                attrs="{'readonly':[('state','not in',['draft'])], 'invisible': [('media_type','=','text')]}"/>
+                            <field name="media_button"
+                                attrs="{'readonly':[('state','not in',['draft'])], 'invisible': [('media_type','!=','button')]}"/>
+                            <field name="media_url"
+                                attrs="{'readonly':[('state','not in',['draft'])], 'invisible': [('media_type','=','text')]}"/>
+                        </group>
+                    </group>
+                </sheet>
+            </xpath>
+            <!-- <xpath expr="//sheet" position="inside">
+                <group name="provider_info">
+                </group>
+            </xpath> -->
+        </field>
+    </record>
+
+    <record id="garazd_sms_sms_search" model="ir.ui.view">
+        <field name="name">garazd.sms.sms.search</field>
+        <field name="model">sms.sms</field>
+        <field name="arch" type="xml">
+            <search string="SMS messages">
+                <field name="message" filter_domain="['|', ('mobile','ilike',self), ('message','ilike',self)]" string="Message"/>
+                <filter string="Queued" domain="[('state','=','draft')]"/>
+                <filter string="Sent" domain="[('state','=','sent')]"/>
+                <filter string="Error" domain="[('state','=','error')]"/>
+                <filter string="Cancel" domain="[('state','=','cancel')]"/>
+                <field name="gateway_id"/>
+                <group expand="0" string="Group By">
+                    <filter string="Gateway" domain="" context="{'group_by':'gateway_id'}"/>
+                    <filter string="Partner" domain="" context="{'group_by':'partner_id'}"/>
+                    <filter string="Provider Send State" domain="" context="{'group_by':'provider_state'}"/>
+                    <filter string="Month" domain="[]" context="{'group_by':'create_date:month'}"/>
+                    <filter string="Day" domain="[]" context="{'group_by':'create_date:day'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+
+</odoo>

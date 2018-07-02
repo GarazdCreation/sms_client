@@ -6,10 +6,13 @@ from odoo import models, fields, api
 
 class Partner(models.Model):
     _inherit = "res.partner"
-    sms_qty = fields.Integer('SMS', compute="_count_partner_sms", store=False)
-    sms_opt_out = fields.Boolean('SMS Opt-Out')
 
-    @api.one
+    sms_qty = fields.Integer('SMS', compute="_count_partner_sms", store=False)
+    sms_opt_out = fields.Boolean('SMS Opt-out')
+    viber_on_phone = fields.Boolean('Viber on Phone')
+    viber_on_mobile = fields.Boolean('Viber on Mobile')
+
     @api.depends('name')
     def _count_partner_sms(self):
-        self.sms_qty = len(self.env['sms.sms'].search([('partner_id', '=', self.id)]))
+        for record in self:
+            record.sms_qty = len(self.env['sms.sms'].search([('partner_id', '=', record.id)]))

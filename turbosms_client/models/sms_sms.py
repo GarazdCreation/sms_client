@@ -20,13 +20,13 @@ except :
 class SmsSms(models.Model):
     _inherit = "sms.sms"
 
-    company_id = fields.Many2one(default=lambda self: self.env.user.company_id.id)
-    turbosms_uuid = fields.Char('TurboSMS UUID')
-    turbosms_state = fields.Char('TurboSMS Send State')
+    # company_id = fields.Many2one(default=lambda self: self.env.user.company_id.id)
+    turbosms_uuid = fields.Char('TurboSMS UUID', deprecated=True)
+    turbosms_state = fields.Char('TurboSMS Send State', deprecated=True)
 
     @api.model
     def _prepare_soap_turbosms(self):
-        keychain_account = self.gateway_id._provider_get_provider_conf()
+        keychain_account = self.gateway_id._provider_get_provider_conf(TURBOSMS_KEYCHAIN_NAMESPACE)
         try:
             keychain_data = keychain_account.get_data()
             smsAccount = keychain_data['sms_account']
@@ -53,11 +53,6 @@ class SmsSms(models.Model):
             params['smsCoding'] = self.coding
         return params
 
-    @api.model
-    def _convert_to_e164(self, erp_number):
-        to_dial_number = erp_number.replace(u'\xa0', u'')
-        return to_dial_number
-
     @api.multi
     def _send_soap_turbosms(self):
         self.ensure_one()
@@ -75,7 +70,7 @@ class SmsSms(models.Model):
         send_status = send_result[0].encode('utf8')
         if send_status != 'Сообщения успешно отправлены':
             raise ValueError(send_status)
-        self.turbosms_uuid = send_result[1].encode('utf8')
+        self.provider_uuid = send_result[1].encode('utf8')
         params.update({
             'password': '*****',
             'to': '*****',
@@ -86,10 +81,11 @@ class SmsSms(models.Model):
                       params['url'], params)
 
     @api.multi
-    def get_turbosms_send_status(self):
+    def get_sms_send_status(self):
         self.ensure_one()
-        if self.turbosms_uuid and self.gateway_id.method == 'soap_turbosms':
-            keychain_account = self.gateway_id._provider_get_provider_conf()
+        rec = super(SmsSms, self).get_sms_send_status()
+        if self.provider_uuid and self.gateway_id.method == 'soap_turbosms':
+            keychain_account = self.gateway_id._provider_get_provider_conf(TURBOSMS_KEYCHAIN_NAMESPACE)
             keychain_data = keychain_account.get_data()
             params = {
                 'login': keychain_account['login'],
@@ -105,5 +101,5 @@ class SmsSms(models.Model):
                 })
             if auth_result != 'Вы успешно авторизировались':
                 raise Warning('Authorization error: %s' % auth_result)
-
-            self.turbosms_state = soap.service.GetMessageStatus(self.turbosms_uuid)
+            self.provider_state = soap.service.GetMessageStatus(self.provider_uuid)
+        return rec

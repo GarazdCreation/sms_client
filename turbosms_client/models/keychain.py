@@ -8,7 +8,6 @@ from odoo import models, fields
 
 TURBOSMS_KEYCHAIN_NAMESPACE = 'turbosms_provider'
 
-
 class Keychain(models.Model):
     _inherit = 'keychain.account'
 

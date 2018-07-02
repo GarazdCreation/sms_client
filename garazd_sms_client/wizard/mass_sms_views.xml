@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="wizard_mass_sms_view_form" model="ir.ui.view">
+        <field name="name">wizard.mass.sms.view.form</field>
+        <field name="model">wizard.mass.sms</field>
+        <field name="inherit_id" ref="base_sms_client.view_wizard_mass_sms"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[2]" position="attributes">
+                <attribute name="attrs">{'invisible': [('channel','!=','sms')]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='message']" position="after">
+                <group>
+                    <field name="model_name" invisible="1"/>
+                    <field name="char_qty" readonly="1"/>
+                    <field name="media_type"
+                        attrs="{'invisible': [('channel','!=','viber')]}"
+                        widget="radio" options="{'horizontal': true}"/>
+                    <field name="media_image"
+                        attrs="{'invisible': ['|',('channel','!=','viber'),('media_type','=','text')]}"/>
+                    <field name="media_button"
+                        attrs="{'invisible': ['|',('channel','!=','viber'),('media_type','!=','button')]}"/>
+                    <field name="media_url"
+                        attrs="{'invisible': ['|',('channel','!=','viber'),('media_type','!=','button')]}"/>
+                </group>
+            </xpath>
+            <xpath expr="//field[@name='gateway_id']" position="after">
+                <field name="balance" readonly="1"/>
+                <field name="channel" />
+            </xpath>
+            <xpath expr="//field[@name='partner_ids']" position="replace"/>
+            <xpath expr="//page[1]" position="after">
+                <page name="partners" string="Recipients">
+                    <div class="row ml4 mt8 mb8 mr16" attrs="{'invisible':[('model_name','!=','partner')]}">
+                        <field name="partners_count" class="oe_inline oe_right"/>
+                        <label for="partners_count" string="Count:" class="oe_inline oe_right"/>
+                        <button name="action_partner_search"
+                            string="Search" type="object"
+                            class="oe_inline oe_highlight mr16"/>
+                        <label for="partner_customer" string="Customers" class="oe_inline"/>
+                        <field name="partner_customer" class="oe_inline mr16"/>
+                        <label for="partner_supplier" string="Suppliers" class="oe_inline"/>
+                        <field name="partner_supplier" class="oe_inline mr16"/>
+                        <label for="partner_viber" string="With Viber" class="oe_inline"/>
+                        <field name="partner_viber" class="oe_inline mr16"/>
+                    </div>
+                    <field name="partner_ids" attrs="{'invisible':[('model_name','!=','partner')]}">
+                        <tree options="{'limit': 10}">
+                            <field name="name"/>
+                            <field name="mobile"/>
+                            <field name="sms_opt_out"/>
+                            <field name="viber_on_phone"/>
+                            <field name="viber_on_mobile"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

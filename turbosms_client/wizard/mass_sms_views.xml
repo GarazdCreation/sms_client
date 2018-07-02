@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- <record id="turbosms_wizard_mass_sms_form" model="ir.ui.view">
+        <field name="name">turbosms.wizard.mass.sms.form</field>
+        <field name="model">wizard.mass.sms</field>
+        <field name="inherit_id" ref="garazd_sms_client.garazd_wizard_mass_sms_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='method']" position="after">
+                <field name="balance_turbosms"
+                    readonly="1"
+                    attrs="{'invisible': [('method', '!=', 'soap_turbosms')]}"/>
+            </xpath>
+        </field>
+    </record> -->
+
+</odoo>

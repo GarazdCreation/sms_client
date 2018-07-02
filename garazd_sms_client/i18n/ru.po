@@ -1,0 +1,807 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* base_sms_client
+#	* garazd_sms_client
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-18 16:32+0000\n"
+"PO-Revision-Date: 2018-05-18 16:32+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: base_sms_client
+#: selection:sms.abstract,coding:0
+#: selection:sms.gateway,coding:0
+#: selection:sms.sms,coding:0
+#: selection:wizard.mass.sms,coding:0
+msgid "7 bit"
+msgstr "7 bit"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_gateway_method
+msgid "API Method"
+msgstr "Метод API"
+
+#. module: base_sms_client
+#: model:ir.ui.view,arch_db:base_sms_client.sms_gateway_form
+msgid "Access Permission"
+msgstr "Разрешения на использование"
+
+#. module: base_sms_client
+#: model:ir.ui.view,arch_db:base_sms_client.sms_gateway_form
+#: model:ir.ui.view,arch_db:base_sms_client.view_wizard_mass_sms
+msgid "Additional option"
+msgstr "Дополнительные опции"
+
+#. module: base_sms_client
+#: selection:sms.gateway,method:0
+msgid "AlphaSMS XML"
+msgstr "AlphaSMS XML"
+
+#. module: base_sms_client
+#: model:ir.model.fields,help:base_sms_client.field_wizard_mass_sms_tag
+msgid "An optional tag"
+msgstr "Метка (опционально)"
+
+#. module: garazd_sms_client
+#: model:ir.model.fields,field_description:garazd_sms_client.field_wizard_mass_sms_balance
+msgid "Balance"
+msgstr "Баланс"
+
+#. module: base_sms_client
+#: model:ir.model.fields,help:base_sms_client.field_sms_gateway_url
+msgid "Base url for message"
+msgstr "Основная ссылка для сообщения"
+
+#. module: garazd_sms_client
+#: selection:sms.sms,media_type:0
+#: selection:wizard.mass.sms,media_type:0
+msgid "Button"
+msgstr "С кнопкой"
+
+#. module: garazd_sms_client
+#: model:ir.model.fields,field_description:garazd_sms_client.field_sms_sms_media_button
+#: model:ir.model.fields,field_description:garazd_sms_client.field_wizard_mass_sms_media_button
+msgid "Button Text"
+msgstr "Текст на кнопке"
+
+#. modules: base_sms_client, garazd_sms_client
+#: model:ir.ui.view,arch_db:base_sms_client.sms_sms_form
+#: model:ir.ui.view,arch_db:base_sms_client.sms_sms_tree
+#: model:ir.ui.view,arch_db:base_sms_client.view_wizard_mass_sms
+#: selection:sms.sms,state:0
+#: model:ir.ui.view,arch_db:garazd_sms_client.garazd_sms_sms_search
+msgid "Cancel"
+msgstr "Отмена"
+
+#. module: garazd_sms_client
+#: model:ir.model.fields,field_description:garazd_sms_client.field_sms_sms_channel
+#: model:ir.model.fields,field_description:garazd_sms_client.field_wizard_mass_sms_channel
+msgid "Channel"
+msgstr "Канал"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_abstract_char_limit
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_gateway_char_limit
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_sms_char_limit
+msgid "Character Limit"
+msgstr "Максимальное количество символов"
+
+#. module: garazd_sms_client
+#: model:ir.model.fields,field_description:garazd_sms_client.field_sms_sms_char_qty
+#: model:ir.model.fields,field_description:garazd_sms_client.field_wizard_mass_sms_char_qty
+msgid "Characters"
+msgstr "Символов"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_abstract_classes
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_gateway_classes
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_sms_classes
+msgid "Class"
+msgstr "Класс"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_wizard_mass_sms_classes
+msgid "Classes"
+msgstr "Классы"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_abstract_coding
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_gateway_coding
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_sms_coding
+#: model:ir.model.fields,field_description:base_sms_client.field_wizard_mass_sms_coding
+msgid "Coding"
+msgstr "Кодировка"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_abstract_company_id
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_gateway_company_id
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_sms_company_id
+msgid "Company id"
+msgstr "Компания"
+
+#. module: garazd_sms_client
+#: model:ir.ui.view,arch_db:garazd_sms_client.garazd_wizard_mass_sms_form
+msgid "Count"
+msgstr "Количество"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_gateway_create_uid
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_sms_create_uid
+#: model:ir.model.fields,field_description:base_sms_client.field_wizard_mass_sms_create_uid
+msgid "Created by"
+msgstr "Создал"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_gateway_create_date
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_sms_create_date
+#: model:ir.model.fields,field_description:base_sms_client.field_wizard_mass_sms_create_date
+msgid "Created on"
+msgstr "Создано"
+
+#. module: garazd_sms_client
+#: model:ir.model.fields,field_description:garazd_sms_client.field_wizard_mass_sms_partner_customer
+#: model:ir.ui.view,arch_db:garazd_sms_client.garazd_wizard_mass_sms_form
+msgid "Customers"
+msgstr "Покупатели"
+
+#. module: garazd_sms_client
+#: model:ir.ui.view,arch_db:garazd_sms_client.garazd_sms_sms_search
+msgid "Day"
+msgstr "День"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_abstract_default_gateway
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_gateway_default_gateway
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_sms_default_gateway
+msgid "Default gateway"
+msgstr "Шлюз по умолчанию"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_abstract_deferred
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_gateway_deferred
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_sms_deferred
+#: model:ir.model.fields,field_description:base_sms_client.field_wizard_mass_sms_deferred
+msgid "Deferred"
+msgstr "Отложено"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_abstract_display_name
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_gateway_display_name
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_sms_display_name
+#: model:ir.model.fields,field_description:base_sms_client.field_wizard_mass_sms_display_name
+msgid "Display Name"
+msgstr "Отображаемое имя"
+
+#. module: base_sms_client
+#: model:ir.model.fields,help:base_sms_client.field_wizard_mass_sms_nostop
+msgid "Do not display STOP clause in the message, this requires that this is not an advertising message"
+msgstr "Do not display STOP clause in the message, this requires that this is not an advertising message"
+
+#. module: base_sms_client
+#: model:ir.model.fields,help:base_sms_client.field_sms_abstract_nostop
+#: model:ir.model.fields,help:base_sms_client.field_sms_gateway_nostop
+#: model:ir.model.fields,help:base_sms_client.field_sms_sms_nostop
+msgid "Do not display STOP clause in the message, this requires that this is not an advertising message."
+msgstr "Do not display STOP clause in the message, this requires that this is not an advertising message."
+
+#. module: base_sms_client
+#: model:ir.model,name:base_sms_client.model_mail_template
+msgid "Email Templates"
+msgstr "Шаблоны писем"
+
+#. modules: base_sms_client, garazd_sms_client
+#: selection:sms.sms,state:0
+#: model:ir.ui.view,arch_db:garazd_sms_client.garazd_sms_sms_search
+msgid "Error"
+msgstr "Ошибка"
+
+#. module: garazd_sms_client
+#: model:ir.model.fields,help:garazd_sms_client.field_sms_sms_media_image
+#: model:ir.model.fields,help:garazd_sms_client.field_wizard_mass_sms_media_image
+msgid "Extensions for image: jpg, jpeg, png or gif."
+msgstr "Расширения для изображения: jpg, jpeg, png or gif."
+
+#. module: base_sms_client
+#: model:ir.model.fields,help:base_sms_client.field_ir_act_server_mobile
+msgid "Field to be used to fetch the mobile number, e.g. you select the invoice model and `object.invoice_address_id.mobile` will be the field providing the correct mobile number."
+msgstr "Field to be used to fetch the mobile number, e.g. you select the invoice model and `object.invoice_address_id.mobile` will be the field providing the correct mobile number."
+
+#. module: base_sms_client
+#: selection:sms.abstract,classes:0
+#: selection:sms.gateway,classes:0
+#: selection:sms.sms,classes:0
+#: selection:wizard.mass.sms,classes:0
+msgid "Flash"
+msgstr "Flash"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_gateway_from_provider
+msgid "From"
+msgstr "От"
+
+#. modules: base_sms_client, garazd_sms_client
+#: model:ir.ui.view,arch_db:base_sms_client.view_wizard_mass_sms
+#: model:ir.ui.view,arch_db:garazd_sms_client.garazd_sms_sms_search
+msgid "Gateway"
+msgstr "Шлюз"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_gateway_name
+msgid "Gateway Name"
+msgstr "Наименование шлюза"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_gateway_state
+msgid "Gateway Status"
+msgstr "Статус шлюза"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_gateway_url
+msgid "Gateway URL"
+msgstr "URL шлюза"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_wizard_mass_sms_gateway_id
+msgid "Gateway id"
+msgstr "Наименование"
+
+#. module: base_sms_client
+#: model:ir.ui.view,arch_db:base_sms_client.sms_gateway_form
+msgid "General"
+msgstr "Общее"
+
+#. module: garazd_sms_client
+#: model:ir.ui.view,arch_db:garazd_sms_client.garazd_sms_sms_form
+#: model:ir.ui.view,arch_db:garazd_sms_client.garazd_sms_sms_tree
+msgid "Get SMS send status"
+msgstr "Запрос статуса отправки"
+
+#. module: garazd_sms_client
+#: model:ir.ui.view,arch_db:garazd_sms_client.garazd_sms_sms_search
+msgid "Group By"
+msgstr "Группировать"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_abstract_id
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_gateway_id
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_sms_id
+#: model:ir.model.fields,field_description:base_sms_client.field_wizard_mass_sms_id
+msgid "ID"
+msgstr "ID"
+
+#. module: garazd_sms_client
+#: model:ir.model.fields,field_description:garazd_sms_client.field_sms_sms_media_image
+#: model:ir.model.fields,field_description:garazd_sms_client.field_wizard_mass_sms_media_image
+msgid "Image URL"
+msgstr "URL изображения"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_sms_error
+#: model:ir.ui.view,arch_db:base_sms_client.sms_sms_form
+msgid "Last Error"
+msgstr "Ошибка"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_abstract___last_update
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_gateway___last_update
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_sms___last_update
+#: model:ir.model.fields,field_description:base_sms_client.field_wizard_mass_sms___last_update
+msgid "Last Modified on"
+msgstr "Последний раз изменено"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_gateway_write_uid
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_sms_write_uid
+#: model:ir.model.fields,field_description:base_sms_client.field_wizard_mass_sms_write_uid
+msgid "Last Updated by"
+msgstr "Последний раз обновил"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_gateway_write_date
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_sms_write_date
+#: model:ir.model.fields,field_description:base_sms_client.field_wizard_mass_sms_write_date
+msgid "Last Updated on"
+msgstr "Последний раз обновлено"
+
+#. module: garazd_sms_client
+#: model:ir.model.fields,field_description:garazd_sms_client.field_sms_sms_media_type
+msgid "Media Type"
+msgstr "Тип сообщения"
+
+#. module: garazd_sms_client
+#: model:ir.model.fields,field_description:garazd_sms_client.field_wizard_mass_sms_media_type
+msgid "Media type"
+msgstr "Тип сообщения"
+
+#. modules: base_sms_client, garazd_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_abstract_body
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_gateway_body
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_sms_body
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_sms_message
+#: model:ir.model.fields,field_description:base_sms_client.field_wizard_mass_sms_message
+#: model:ir.ui.view,arch_db:base_sms_client.view_wizard_mass_sms
+#: model:ir.ui.view,arch_db:garazd_sms_client.garazd_sms_sms_search
+msgid "Message"
+msgstr "Сообщение"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_sms_state
+msgid "Message Status"
+msgstr "Статус"
+
+#. module: base_sms_client
+#: model:ir.ui.view,arch_db:base_sms_client.sms_gateway_form
+msgid "Method"
+msgstr "Метод"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_sms_mobile
+msgid "Mobile"
+msgstr "Мобильный"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_ir_act_server_mobile
+msgid "Mobile No"
+msgstr "Номер телефона"
+
+#. module: garazd_sms_client
+#: model:ir.ui.view,arch_db:garazd_sms_client.garazd_sms_sms_search
+msgid "Month"
+msgstr "Месяц"
+
+#. module: base_sms_client
+#: model:ir.ui.view,arch_db:base_sms_client.sms_gateway_form
+msgid "Name"
+msgstr "Наименование"
+
+#. module: base_sms_client
+#: code:addons/base_sms_client/models/sms_sms.py:66
+#, python-format
+msgid "No method gateway selected "
+msgstr "Не выбран метод отправки для шлюза "
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_abstract_nostop
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_gateway_nostop
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_sms_nostop
+#: model:ir.model.fields,field_description:base_sms_client.field_wizard_mass_sms_nostop
+msgid "Nostop"
+msgstr "Nostop"
+
+#. module: base_sms_client
+#: selection:sms.gateway,state:0
+msgid "Not Verified"
+msgstr "Не проверено"
+
+#. module: garazd_sms_client
+#: selection:sms.sms,media_type:0
+#: selection:wizard.mass.sms,media_type:0
+msgid "Only Image w/o Text"
+msgstr "Только картинка (без текста)"
+
+#. modules: base_sms_client, garazd_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_sms_partner_id
+#: model:ir.model,name:garazd_sms_client.model_res_partner
+#: model:ir.ui.view,arch_db:garazd_sms_client.garazd_sms_sms_search
+msgid "Partner"
+msgstr "Получатель"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_wizard_mass_sms_partner_ids
+msgid "Partner ids"
+msgstr "Получатели"
+
+#. module: base_sms_client
+#: model:ir.ui.view,arch_db:base_sms_client.sms_gateway_form
+msgid "Permission"
+msgstr "Права доступа"
+
+#. module: base_sms_client
+#: selection:sms.abstract,classes:0
+#: selection:sms.gateway,classes:0
+#: selection:sms.sms,classes:0
+#: selection:wizard.mass.sms,classes:0
+msgid "Phone display"
+msgstr "Телефон"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_abstract_priority
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_gateway_priority
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_sms_priority
+#: model:ir.model.fields,field_description:base_sms_client.field_wizard_mass_sms_priority
+msgid "Priority"
+msgstr "Приоритет"
+
+#. module: garazd_sms_client
+#: model:ir.model.fields,field_description:garazd_sms_client.field_sms_sms_provider_state
+#: model:ir.ui.view,arch_db:garazd_sms_client.garazd_sms_sms_search
+msgid "Provider Send State"
+msgstr "Статус отправки"
+
+#. module: garazd_sms_client
+#: model:ir.model.fields,field_description:garazd_sms_client.field_sms_sms_provider_uuid
+msgid "Provider UUID"
+msgstr "ID сообщения"
+
+#. modules: base_sms_client, garazd_sms_client
+#: selection:sms.sms,state:0
+#: model:ir.ui.view,arch_db:garazd_sms_client.garazd_sms_sms_search
+msgid "Queued"
+msgstr "В очереди"
+
+#. module: garazd_sms_client
+#: model:ir.ui.view,arch_db:garazd_sms_client.garazd_wizard_mass_sms_form
+msgid "Recipients"
+msgstr "Получатели"
+
+#. module: garazd_sms_client
+#: model:ir.model.fields,field_description:garazd_sms_client.field_wizard_mass_sms_partners_count
+msgid "Recipients Count"
+msgstr "Количество получателей"
+
+#. module: base_sms_client
+#: model:ir.ui.view,arch_db:base_sms_client.sms_sms_form
+#: model:ir.ui.view,arch_db:base_sms_client.sms_sms_tree
+msgid "Retry"
+msgstr "Повтор"
+
+#. module: base_sms_client
+#: selection:sms.abstract,classes:0
+#: selection:sms.gateway,classes:0
+#: selection:sms.sms,classes:0
+#: selection:wizard.mass.sms,classes:0
+msgid "SIM"
+msgstr "SIM"
+
+#. modules: base_sms_client, garazd_sms_client
+#: model:ir.model,name:base_sms_client.model_sms_sms
+#: model:ir.model.fields,field_description:base_sms_client.field_ir_act_server_sms
+#: model:ir.ui.view,arch_db:base_sms_client.view_server_statistics_graph
+#: model:ir.actions.act_window,name:garazd_sms_client.action_partner_sms_tree
+#: model:ir.model,name:garazd_sms_client.model_sms_sms
+#: model:ir.model.fields,field_description:garazd_sms_client.field_res_partner_sms_qty
+#: model:ir.model.fields,field_description:garazd_sms_client.field_res_users_sms_qty
+#: selection:sms.sms,channel:0
+#: selection:wizard.mass.sms,channel:0
+msgid "SMS"
+msgstr "СМС"
+
+#. module: base_sms_client
+#: model:res.groups,name:base_sms_client.group_sms_user
+msgid "SMS / User"
+msgstr "SMS / User"
+
+#. module: base_sms_client
+#: model:ir.model,name:base_sms_client.model_sms_abstract
+msgid "SMS Abstract Model"
+msgstr "SMS Abstract Model"
+
+#. modules: base_sms_client, garazd_sms_client
+#: model:ir.model,name:base_sms_client.model_sms_gateway
+#: model:ir.model,name:garazd_sms_client.model_sms_gateway
+msgid "SMS Client"
+msgstr "SMS Client"
+
+#. module: garazd_sms_client
+#: model:ir.model.fields,field_description:garazd_sms_client.field_sms_sms_sms_count
+msgid "SMS Count"
+msgstr "Кол-во СМС"
+
+#. module: base_sms_client
+#: model:ir.actions.act_window,name:base_sms_client.action_sms_gateway_tree
+#: model:ir.model.fields,field_description:base_sms_client.field_email_template_preview_gateway_id
+#: model:ir.model.fields,field_description:base_sms_client.field_mail_template_gateway_id
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_sms_gateway_id
+#: model:ir.ui.menu,name:base_sms_client.menu_gateway_administration_sms_server
+#: model:ir.ui.view,arch_db:base_sms_client.sms_gateway_form
+msgid "SMS Gateway"
+msgstr "СМС шлюз"
+
+#. module: base_sms_client
+#: model:ir.ui.view,arch_db:base_sms_client.view_wizard_mass_sms
+msgid "SMS Gateway - Sens SMS"
+msgstr "СМС шлюз - Отправить сообщение"
+
+#. module: base_sms_client
+#: model:ir.ui.view,arch_db:base_sms_client.sms_gateway_tree
+msgid "SMS Gateways"
+msgstr "СМС шлюзы"
+
+#. modules: base_sms_client, garazd_sms_client
+#: model:ir.ui.menu,name:base_sms_client.menu_gateway_administration_sms
+#: model:ir.ui.view,arch_db:base_sms_client.sms_sms_form
+#: model:ir.ui.view,arch_db:garazd_sms_client.garazd_sms_sms_form
+msgid "SMS Message"
+msgstr "СМС сообщение"
+
+#. module: garazd_sms_client
+#: model:ir.model.fields,field_description:garazd_sms_client.field_res_partner_sms_opt_out
+#: model:ir.model.fields,field_description:garazd_sms_client.field_res_users_sms_opt_out
+msgid "SMS Opt-out"
+msgstr "Отказ от СМС"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_ir_act_server_sms_server_id
+msgid "SMS Server"
+msgstr "СМС сервер"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_email_template_preview_sms_template
+#: model:ir.model.fields,field_description:base_sms_client.field_ir_act_server_sms_template_id
+#: model:ir.model.fields,field_description:base_sms_client.field_mail_template_sms_template
+msgid "SMS Template"
+msgstr "Шаблон СМС"
+
+#. module: garazd_sms_client
+#: model:ir.ui.view,arch_db:garazd_sms_client.garazd_sms_sms_search
+msgid "SMS messages"
+msgstr "СМС сообщения"
+
+#. module: garazd_sms_client
+#: model:ir.ui.view,arch_db:garazd_sms_client.garazd_wizard_mass_sms_form
+msgid "Search"
+msgstr "Поиск"
+
+#. module: base_sms_client
+#: model:ir.model.fields,help:base_sms_client.field_ir_act_server_sms_server_id
+msgid "Select the SMS Gateway configuration to use with this action."
+msgstr "Select the SMS Gateway configuration to use with this action."
+
+#. module: base_sms_client
+#: model:ir.model.fields,help:base_sms_client.field_ir_act_server_sms_template_id
+msgid "Select the SMS Template configuration to use with this action."
+msgstr "Select the SMS Template configuration to use with this action."
+
+#. module: base_sms_client
+#: model:ir.ui.view,arch_db:base_sms_client.sms_sms_form
+#: model:ir.ui.view,arch_db:base_sms_client.sms_sms_tree
+msgid "Send"
+msgstr "Отправить"
+
+#. module: base_sms_client
+#: model:ir.ui.view,arch_db:base_sms_client.view_wizard_mass_sms
+msgid "Send SMS"
+msgstr "Отправить"
+
+#. module: base_sms_client
+#: model:ir.actions.act_window,name:base_sms_client.action_wizard_mass_sms
+msgid "Send an SMS"
+msgstr "Отправить сообщение"
+
+#. module: garazd_sms_client
+#: code:addons/garazd_sms_client/wizard/mass_sms.py:58
+#, python-format
+msgid "Send message"
+msgstr "Отправить сообщение"
+
+#. modules: base_sms_client, garazd_sms_client
+#: selection:sms.sms,state:0
+#: model:ir.ui.view,arch_db:garazd_sms_client.garazd_sms_sms_search
+msgid "Sent"
+msgstr "Отправлено"
+
+#. module: base_sms_client
+#: code:addons/base_sms_client/models/sms_sms.py:89
+#, python-format
+msgid "Size of SMS should not be more than %s characters "
+msgstr "Размер сообщения должен быть не более %s символов "
+
+#. module: base_sms_client
+#: model:ir.actions.act_window,name:base_sms_client.action_sms_sms_tree
+#: model:ir.ui.view,arch_db:base_sms_client.sms_sms_form
+#: model:ir.ui.view,arch_db:base_sms_client.sms_sms_tree
+msgid "Sms"
+msgstr "СМС"
+
+#. module: base_sms_client
+#: model:ir.actions.act_window,name:base_sms_client.act_sms_gateway_2_sms
+msgid "Sms Message"
+msgstr "СМС сообщение"
+
+#. module: garazd_sms_client
+#: model:ir.ui.view,arch_db:garazd_sms_client.garazd_sms_sms_form
+msgid "Status"
+msgstr "Статус"
+
+#. module: garazd_sms_client
+#: model:ir.model.fields,field_description:garazd_sms_client.field_wizard_mass_sms_partner_supplier
+#: model:ir.ui.view,arch_db:garazd_sms_client.garazd_wizard_mass_sms_form
+msgid "Suppliers"
+msgstr "Поставщики"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_abstract_tag
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_gateway_tag
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_sms_tag
+#: model:ir.model.fields,field_description:base_sms_client.field_wizard_mass_sms_tag
+msgid "Tag"
+msgstr "Метка"
+
+#. module: garazd_sms_client
+#: selection:sms.sms,media_type:0
+#: selection:wizard.mass.sms,media_type:0
+msgid "Text"
+msgstr "Текст"
+
+#. module: base_sms_client
+#: model:ir.model.fields,help:base_sms_client.field_sms_abstract_classes
+#: model:ir.model.fields,help:base_sms_client.field_sms_gateway_classes
+#: model:ir.model.fields,help:base_sms_client.field_sms_sms_classes
+msgid "The SMS class"
+msgstr "Класс СМС"
+
+#. module: base_sms_client
+#: model:ir.model.fields,help:base_sms_client.field_sms_abstract_coding
+#: model:ir.model.fields,help:base_sms_client.field_sms_gateway_coding
+#: model:ir.model.fields,help:base_sms_client.field_sms_sms_coding
+msgid "The SMS coding: 1 for 7 bit (160 chracters maxlength) or 2 for unicode (70 characters maxlength)"
+msgstr "Кодировка СМС: 1 для 7 bit (максимальная длина 160 символов) или 2 для unicode (максимальная длина 70 символов)"
+
+#. module: base_sms_client
+#: model:ir.model.fields,help:base_sms_client.field_sms_abstract_validity
+#: model:ir.model.fields,help:base_sms_client.field_sms_gateway_validity
+#: model:ir.model.fields,help:base_sms_client.field_sms_sms_validity
+msgid "The maximum time - in minute(s) - before the message is dropped."
+msgstr "Максимальное время - в минутах - перед тем как сообщение будет удалено."
+
+#. module: base_sms_client
+#: model:ir.model.fields,help:base_sms_client.field_wizard_mass_sms_validity
+msgid "The maximum time -in minute(s)- before the message is dropped"
+msgstr "Максимальное время - в минутах - перед тем как сообщение будет удалено"
+
+#. module: base_sms_client
+#: model:ir.model.fields,help:base_sms_client.field_sms_abstract_body
+#: model:ir.model.fields,help:base_sms_client.field_sms_gateway_body
+#: model:ir.model.fields,help:base_sms_client.field_sms_sms_body
+msgid "The message text that will be send along with the email which is send through this server."
+msgstr "The message text that will be send along with the email which is send through this server."
+
+#. module: garazd_sms_client
+#: code:addons/garazd_sms_client/wizard/mass_sms.py:79
+#, python-format
+msgid "The partner %s does not have a phone number."
+msgstr "У получателя %s не указано номеров телефона."
+
+#. module: base_sms_client
+#: model:ir.model.fields,help:base_sms_client.field_sms_abstract_priority
+#: model:ir.model.fields,help:base_sms_client.field_sms_gateway_priority
+#: model:ir.model.fields,help:base_sms_client.field_sms_sms_priority
+#: model:ir.model.fields,help:base_sms_client.field_wizard_mass_sms_priority
+msgid "The priority of the message"
+msgstr "Приоритет сообщения"
+
+#. module: base_sms_client
+#: model:ir.model.fields,help:base_sms_client.field_wizard_mass_sms_classes
+msgid "The sms class: flash(0),phone display(1),SIM(2),toolkit(3)"
+msgstr "Класс СМС: flash(0),phone display(1),SIM(2),toolkit(3)"
+
+#. module: base_sms_client
+#: model:ir.model.fields,help:base_sms_client.field_wizard_mass_sms_coding
+msgid "The sms coding: 1 for 7 bit or 2 for unicode"
+msgstr "Кодировка СМС: 1 для 7 bit или 2 для unicode"
+
+#. module: base_sms_client
+#: model:ir.model.fields,help:base_sms_client.field_wizard_mass_sms_deferred
+msgid "The time -in minute(s)- to wait before sending the message"
+msgstr "Время паузы -в минутах- перед отправкой СМС сообщения"
+
+#. module: base_sms_client
+#: model:ir.model.fields,help:base_sms_client.field_sms_abstract_deferred
+#: model:ir.model.fields,help:base_sms_client.field_sms_gateway_deferred
+#: model:ir.model.fields,help:base_sms_client.field_sms_sms_deferred
+msgid "The time -in minute(s)- to wait before sending the message."
+msgstr "Время паузы -в минутах- перед отправкой СМС сообщения."
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_email_template_preview_mobile_to
+#: model:ir.model.fields,field_description:base_sms_client.field_mail_template_mobile_to
+msgid "To (Mobile)"
+msgstr "На (Телефон)"
+
+#. module: base_sms_client
+#: selection:sms.abstract,classes:0
+#: selection:sms.gateway,classes:0
+#: selection:sms.sms,classes:0
+#: selection:wizard.mass.sms,classes:0
+msgid "Toolkit"
+msgstr "Toolkit"
+
+#. module: garazd_sms_client
+#: model:ir.model.fields,field_description:garazd_sms_client.field_sms_sms_media_url
+#: model:ir.model.fields,field_description:garazd_sms_client.field_wizard_mass_sms_media_url
+msgid "URL"
+msgstr "URL ссылка"
+
+#. module: base_sms_client
+#: selection:sms.abstract,coding:0
+#: selection:sms.gateway,coding:0
+#: selection:sms.sms,coding:0
+#: selection:wizard.mass.sms,coding:0
+msgid "Unicode"
+msgstr "Unicode"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_gateway_user_ids
+msgid "Users Allowed to use the gateway"
+msgstr "Пользователи, которые могут использовать данный шлюз"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_abstract_validity
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_gateway_validity
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_sms_validity
+#: model:ir.model.fields,field_description:base_sms_client.field_wizard_mass_sms_validity
+msgid "Validity"
+msgstr "Период действия"
+
+#. module: base_sms_client
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_abstract_code
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_gateway_code
+#: model:ir.model.fields,field_description:base_sms_client.field_sms_sms_code
+msgid "Verification Code"
+msgstr "Проверочный код"
+
+#. module: base_sms_client
+#: selection:sms.gateway,state:0
+msgid "Verified"
+msgstr "Проверено"
+
+#. module: garazd_sms_client
+#: model:ir.ui.view,arch_db:garazd_sms_client.garazd_sms_sms_form
+#: selection:sms.sms,channel:0
+#: selection:wizard.mass.sms,channel:0
+msgid "Viber"
+msgstr "Viber"
+
+#. module: garazd_sms_client
+#: model:ir.model.fields,field_description:garazd_sms_client.field_res_partner_viber_on_mobile
+#: model:ir.model.fields,field_description:garazd_sms_client.field_res_users_viber_on_mobile
+msgid "Viber on Mobile"
+msgstr "Viber на мобильном"
+
+#. module: garazd_sms_client
+#: model:ir.model.fields,field_description:garazd_sms_client.field_res_partner_viber_on_phone
+#: model:ir.model.fields,field_description:garazd_sms_client.field_res_users_viber_on_phone
+msgid "Viber on Phone"
+msgstr "Viber на основном"
+
+#. module: base_sms_client
+#: selection:sms.gateway,state:0
+msgid "Waiting for Verification"
+msgstr "Ожидание подтверждения"
+
+#. module: garazd_sms_client
+#: model:ir.model.fields,field_description:garazd_sms_client.field_wizard_mass_sms_partner_viber
+#: model:ir.ui.view,arch_db:garazd_sms_client.garazd_wizard_mass_sms_form
+msgid "With Viber"
+msgstr "С вайбером"
+
+#. module: base_sms_client
+#: model:ir.model.fields,help:base_sms_client.field_sms_abstract_tag
+#: model:ir.model.fields,help:base_sms_client.field_sms_gateway_tag
+#: model:ir.model.fields,help:base_sms_client.field_sms_sms_tag
+msgid "an optional tag"
+msgstr "метка (опционально)"
+
+#. module: base_sms_client
+#: model:ir.model,name:base_sms_client.model_ir_actions_server
+msgid "ir.actions.server"
+msgstr "ir.actions.server"
+
+#. module: base_sms_client
+#: model:ir.ui.view,arch_db:base_sms_client.view_wizard_mass_sms
+msgid "or"
+msgstr "или"
+
+#. modules: base_sms_client, garazd_sms_client
+#: model:ir.model,name:base_sms_client.model_wizard_mass_sms
+#: model:ir.model,name:garazd_sms_client.model_wizard_mass_sms
+msgid "wizard.mass.sms"
+msgstr "wizard.mass.sms"

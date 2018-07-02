@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- <record id="turbo_sms_sms_tree" model="ir.ui.view">
+        <field name="name">turbo.sms.sms.tree</field>
+        <field name="model">sms.sms</field>
+        <field name="inherit_id" ref="garazd_sms_client.garazd_sms_sms_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='provider_state']" position="after">
+                <button string="" name="get_turbosms_send_status"
+                    type="object" icon="fa-commenting-o"
+                    help="Get SMS send status"
+                    attrs="{'invisible': ['|',('provider_uuid', '=', False),('method','!=','soap_turbosms')]}"/>
+            </xpath>
+        </field>
+    </record> -->
+
+    <!-- <record id="turbo_sms_sms_form" model="ir.ui.view">
+        <field name="name">turbo.sms.sms.form</field>
+        <field name="model">sms.sms</field>
+        <field name="inherit_id" ref="garazd_sms_client.garazd_sms_sms_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='provider_state']" position="after">
+                <button string="Get SMS status" name="get_turbosms_send_status"
+                    type="object" icon="fa-commenting-o"
+                    help="Get SMS send status"
+                    attrs="{'invisible': ['|',('provider_uuid', '=', False),('method','!=','soap_turbosms')]}"/>
+            </xpath>
+        </field>
+    </record> -->
+
+</odoo>
