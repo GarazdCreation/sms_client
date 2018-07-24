@@ -5,10 +5,13 @@
 {
     'name': 'TurboSMS Client',
     'version': '10.0.2.0.1',
-    'license': 'AGPL-3',
-    'category': 'Tools',
+    'category': 'Partner Management',
     'author': 'Garazd Creation',
     'website': "https://garazd.biz",
+    'license': 'AGPL-3',
+    'summary': """Allows send SMS messages to partners.""",
+    'description': 'Allows send SMS messages to partners via TurboSMS service.',
+    'images': ['static/description/banner.png'],
     'depends': [
         'garazd_sms_client',
     ],
@@ -19,5 +22,7 @@
         'views/sms_gateway_views.xml',
         'wizard/mass_sms_views.xml',
     ],
+    'application': False,
     'installable': True,
+    'auto_install': False,
 }
