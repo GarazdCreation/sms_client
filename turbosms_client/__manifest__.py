@@ -10,10 +10,6 @@
     'author': 'Garazd Creation',
     'website': "https://garazd.biz",
     'depends': [
-        # 'mail',
-        # 'base_sms_client',
-        # 'base_suspend_security',
-        # 'keychain',
         'garazd_sms_client',
     ],
     'application': True,
