@@ -5,11 +5,13 @@
 {
     'name': 'Garazd SMS Client',
     'version': '10.0.1.0.1',
-    'description': 'Common SMS Client for Ukrainian SMS Services',
-    'license': 'AGPL-3',
-    'category': 'Tools',
+    'category': 'Uncategorized',
     'author': 'Garazd Creation',
     'website': "https://garazd.biz",
+    'license': 'AGPL-3',
+    'summary': """Common SMS Client for Ukrainian SMS Services.""",
+    'description': 'Extends the capabilities of the "Partner" and "SMS message" models.',
+    'images': ['static/description/banner.png'],
     'depends': [
         'base_sms_client',
         'base_suspend_security',
