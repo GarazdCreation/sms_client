@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# Copyright (C) 2018 Razumovskyi Yurii <GarazdCreation@gmail.com>
 
 from odoo import api, fields, models
 
