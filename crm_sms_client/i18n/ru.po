@@ -1,0 +1,96 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* crm_sms_client
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-23 22:45+0000\n"
+"PO-Revision-Date: 2018-05-23 22:45+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm_sms_client
+#: model:ir.ui.view,arch_db:crm_sms_client.crm_wizard_mass_sms_view_form
+msgid "Count:"
+msgstr "Кол-во:"
+
+#. module: crm_sms_client
+#: model:ir.model.fields,field_description:crm_sms_client.field_sms_sms_lead_id
+msgid "Lead"
+msgstr "Сделка/лид"
+
+#. module: crm_sms_client
+#: model:ir.model.fields,field_description:crm_sms_client.field_wizard_mass_sms_stage_id
+#: model:ir.ui.view,arch_db:crm_sms_client.crm_wizard_mass_sms_view_form
+msgid "Lead Stage"
+msgstr "Этап"
+
+#. module: crm_sms_client
+#: model:ir.model.fields,field_description:crm_sms_client.field_wizard_mass_sms_lead_ids
+msgid "Lead ids"
+msgstr "Сделки/лиды"
+
+#. module: crm_sms_client
+#: model:ir.model,name:crm_sms_client.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Сделка/лид"
+
+#. module: crm_sms_client
+#: model:ir.actions.act_window,name:crm_sms_client.action_crm_lead_sms_tree
+#: model:ir.model,name:crm_sms_client.model_sms_sms
+#: model:ir.model.fields,field_description:crm_sms_client.field_crm_lead_sms_qty
+msgid "SMS"
+msgstr "СМС"
+
+#. module: crm_sms_client
+#: model:ir.model.fields,field_description:crm_sms_client.field_crm_lead_sms_opt_out
+msgid "SMS Opt-out"
+msgstr "Отказ от СМС"
+
+#. module: crm_sms_client
+#: model:ir.ui.view,arch_db:crm_sms_client.crm_wizard_mass_sms_view_form
+msgid "Search"
+msgstr "Поиск"
+
+#. module: crm_sms_client
+#: model:ir.actions.act_window,name:crm_sms_client.action_wizard_mass_sms
+msgid "Send an SMS"
+msgstr "Отправить сообщение"
+
+#. module: crm_sms_client
+#: code:addons/crm_sms_client/wizard/mass_sms.py:54
+#, python-format
+msgid "Send message"
+msgstr "Отправить сообщение"
+
+#. module: crm_sms_client
+#: model:ir.model.fields,field_description:crm_sms_client.field_wizard_mass_sms_tag_ids
+#: model:ir.ui.view,arch_db:crm_sms_client.crm_wizard_mass_sms_view_form
+msgid "Tags"
+msgstr "Метки"
+
+#. module: crm_sms_client
+#: model:ir.model.fields,field_description:crm_sms_client.field_crm_lead_viber_on_mobile
+msgid "Viber on Mobile"
+msgstr "Viber на мобильном"
+
+#. module: crm_sms_client
+#: model:ir.model.fields,field_description:crm_sms_client.field_crm_lead_viber_on_phone
+msgid "Viber on Phone"
+msgstr "Viber на телефоне"
+
+#. module: crm_sms_client
+#: model:ir.ui.view,arch_db:crm_sms_client.crm_wizard_mass_sms_view_form
+msgid "With Viber"
+msgstr "С вайбером"
+
+#. module: crm_sms_client
+#: model:ir.model,name:crm_sms_client.model_wizard_mass_sms
+msgid "wizard.mass.sms"
+msgstr "wizard.mass.sms"

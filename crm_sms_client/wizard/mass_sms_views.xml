@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <act_window name="Send an SMS"
+                res_model="wizard.mass.sms"
+                src_model="crm.lead"
+                view_mode="form"
+                target="new"
+                key2="client_action_multi"
+                context="{'default_model_name': 'lead'}"
+                id="action_wizard_mass_sms"/>
+
+    <act_window id="action_crm_send_message"
+  		name="Send an SMS"
+  		res_model="wizard.mass.sms"
+        target="new"
+        context="{'default_model_name': 'lead'}"
+  		view_mode="form" />
+
+	<menuitem id="menu_crm_send_message"
+		name="Send an SMS"
+		parent="sales_team.menu_sales"
+		sequence="20"
+		action="action_crm_send_message" />
+
+    <record id="crm_wizard_mass_sms_view_form" model="ir.ui.view">
+        <field name="name">crm.wizard.mass.sms.view.form</field>
+        <field name="model">wizard.mass.sms</field>
+        <field name="inherit_id" ref="garazd_sms_client.wizard_mass_sms_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_ids']" position="after">
+                <div class="row ml4 mt8 mb8 mr16" attrs="{'invisible':[('model_name','!=','lead')]}">
+                    <field name="partners_count" class="oe_inline oe_right"/>
+                    <label for="partners_count" string="Count:" class="oe_inline oe_right"/>
+                    <button name="action_lead_search"
+                        string="Search" type="object"
+                        class="oe_inline oe_highlight mr16"/>
+                    <label for="tag_ids" string="Tags" class="oe_inline"/>
+                    <field name="tag_ids" class="oe_inline mr16" widget="many2many_tags"/>
+                    <label for="stage_id" string="Lead Stage" class="oe_inline"/>
+                    <field name="stage_id" class="oe_inline mr16" options="{'no_open': True, 'no_create': True}"/>
+                    <label for="partner_viber" string="With Viber" class="oe_inline"/>
+                    <field name="partner_viber" class="oe_inline mr16"/>
+                </div>
+                <field name="lead_ids" attrs="{'invisible':[('model_name','!=','lead')]}">
+                    <tree options="{'limit': 10}">
+                        <field name="name"/>
+                        <field name="mobile"/>
+                        <field name="sms_opt_out"/>
+                        <field name="viber_on_phone"/>
+                        <field name="viber_on_mobile"/>
+                    </tree>
+                </field>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
