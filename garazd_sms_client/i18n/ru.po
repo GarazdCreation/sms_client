@@ -770,7 +770,7 @@ msgstr "Viber на мобильном"
 #: model:ir.model.fields,field_description:garazd_sms_client.field_res_partner_viber_on_phone
 #: model:ir.model.fields,field_description:garazd_sms_client.field_res_users_viber_on_phone
 msgid "Viber on Phone"
-msgstr "Viber на основном"
+msgstr "Viber на телефоне"
 
 #. module: base_sms_client
 #: selection:sms.gateway,state:0

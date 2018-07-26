@@ -7,7 +7,7 @@
     'version': '10.0.2.0.1',
     'category': 'Partner Management',
     'author': 'Garazd Creation',
-    'website': "https://garazd.biz",
+    'website': 'https://garazd.biz',
     'license': 'AGPL-3',
     'summary': """Allows send SMS messages to partners.""",
     'description': 'Allows send SMS messages to partners via TurboSMS service.',
@@ -15,7 +15,6 @@
     'depends': [
         'garazd_sms_client',
     ],
-    'application': True,
     'data': [
         'data/keychain.xml',
         'views/sms_sms_views.xml',
