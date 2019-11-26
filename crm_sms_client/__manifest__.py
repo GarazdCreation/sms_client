@@ -6,7 +6,7 @@
     'category': 'CRM',
     'author': 'Garazd Creation',
     'website': 'https://garazd.biz',
-    'license': 'LGPL-3',
+    'license': 'AGPL-3',
     'summary': """Allows to send SMS messages to CRM Leads.""",
     'description': 'Adds ability to send SMS to CRM Leads/opportunities.',
     'images': ['static/description/banner.png'],
